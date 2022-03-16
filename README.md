@@ -1,6 +1,6 @@
 FBSnapshotTestCase
 ======================
 
-This project has a new name and home!
-
-You can now find `iOSSnapshotTestCase` [here](https://github.com/uber/ios-snapshot-test-case/).
+Fork of the (archived) [ios-snapshot-test-case](https://github.com/facebookarchive/ios-snapshot-test-case)
+mainly to add support for SPM. **Avoid using this directly, use
+[MMMTestCase](https://github.com/mediamonks/MMMTestCase) instead.**

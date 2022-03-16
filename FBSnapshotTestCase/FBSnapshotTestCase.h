@@ -6,8 +6,13 @@
  *
  */
 
+#if SWIFT_PACKAGE
+#import "FBSnapshotTestCasePlatform.h"
+#import "FBSnapshotTestController.h"
+#else
 #import <FBSnapshotTestCase/FBSnapshotTestCasePlatform.h>
 #import <FBSnapshotTestCase/FBSnapshotTestController.h>
+#endif
 
 #import <QuartzCore/QuartzCore.h>
 

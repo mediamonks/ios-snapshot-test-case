@@ -6,8 +6,13 @@
  *
  */
 
+#if SWIFT_PACKAGE
+#import "UIImage+Snapshot.h"
+#import "UIApplication+StrictKeyWindow.h"
+#else
 #import <FBSnapshotTestCase/UIImage+Snapshot.h>
 #import <FBSnapshotTestCase/UIApplication+StrictKeyWindow.h>
+#endif
 
 @implementation UIImage (Snapshot)
 

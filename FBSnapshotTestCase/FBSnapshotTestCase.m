@@ -6,8 +6,13 @@
  *
  */
 
+#if SWIFT_PACKAGE
+#import "FBSnapshotTestCase.h"
+#import "FBSnapshotTestController.h"
+#else
 #import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 #import <FBSnapshotTestCase/FBSnapshotTestController.h>
+#endif
 
 @implementation FBSnapshotTestCase
 {

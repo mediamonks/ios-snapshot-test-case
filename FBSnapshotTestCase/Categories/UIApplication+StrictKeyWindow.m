@@ -6,7 +6,11 @@
  *
  */
 
+#if SWIFT_PACKAGE
+#import "UIApplication+StrictKeyWindow.h"
+#else
 #import <FBSnapshotTestCase/UIApplication+StrictKeyWindow.h>
+#endif
 
 @implementation UIApplication (StrictKeyWindow)
 

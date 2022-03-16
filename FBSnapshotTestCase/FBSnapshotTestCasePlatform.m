@@ -6,8 +6,14 @@
  *
  */
 
+#if SWIFT_PACKAGE
+#import "FBSnapshotTestCasePlatform.h"
+#import "Categories/UIApplication+StrictKeyWindow.h"
+#else
 #import <FBSnapshotTestCase/FBSnapshotTestCasePlatform.h>
 #import <FBSnapshotTestCase/UIApplication+StrictKeyWindow.h>
+#endif
+
 #import <UIKit/UIKit.h>
 
 BOOL FBSnapshotTestCaseIs64Bit(void)

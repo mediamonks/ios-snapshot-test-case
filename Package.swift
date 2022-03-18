@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -10,6 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "FBSnapshotTestCase",
+            type: .dynamic,
             targets: ["FBSnapshotTestCase"]
 		)
     ],
@@ -19,6 +20,7 @@ let package = Package(
             name: "FBSnapshotTestCase",
             dependencies: [],
             path: "FBSnapshotTestCase",
+            exclude: ["FBSnapshotTestCase-Info.plist"],
             publicHeadersPath: "include"
 		)
     ]

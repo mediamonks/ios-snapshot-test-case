@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FBSnapshotTestCase"
-  s.version      = "2.2.1"
+  s.version      = "2.2.2"
   s.summary      = "Snapshot view unit tests for iOS"
   s.description  = <<-DESC
                     A "snapshot test case" takes a configured UIView or CALayer
@@ -21,14 +21,10 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
   s.user_target_xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks' }
 
-  s.default_subspecs = 'SwiftSupport'
   s.subspec 'Core' do |cs|
-    cs.source_files = 'FBSnapshotTestCase/**/*.{h,m}', 'FBSnapshotTestCase/*.{h,m}'
+    cs.source_files = 'FBSnapshotTestCase/**/*.{h,m}'
+    cs.exclude_files = 'FBSnapshotTestCase/include/*.h' # This is an SPM-specific one.
     cs.public_header_files = 'FBSnapshotTestCase/FBSnapshotTestCase.h','FBSnapshotTestCase/FBSnapshotTestCasePlatform.h','FBSnapshotTestCase/FBSnapshotTestController.h'
     cs.private_header_files = 'FBSnapshotTestCase/Categories/UIImage+Compare.h','FBSnapshotTestCase/Categories/UIImage+Diff.h','FBSnapshotTestCase/Categories/UIImage+Snapshot.h'
-  end
-  s.subspec 'SwiftSupport' do |cs|
-    cs.dependency 'FBSnapshotTestCase/Core'
-    cs.source_files = 'FBSnapshotTestCase/**/*.swift'
   end
 end

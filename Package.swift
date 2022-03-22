@@ -20,7 +20,7 @@ let package = Package(
             name: "FBSnapshotTestCase",
             dependencies: [],
             path: "FBSnapshotTestCase",
-            exclude: ["FBSnapshotTestCase-Info.plist"],
+            exclude: ["FBSnapshotTestCase-Info.plist", "Dummy.swift"],
             publicHeadersPath: "include"
 		)
     ]
